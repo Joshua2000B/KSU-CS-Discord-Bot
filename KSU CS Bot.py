@@ -100,7 +100,7 @@ class MyClient(discord.Client):
     #ADD_ROLE
     async def add_role(self,message):
         command = message.content.split()
-        if(message.channel.name != "roles"):
+        if(message.channel.name != "roles" and message.channel.name != "bot-testing"):
             return
 
         if(len(command)==1):
@@ -137,7 +137,7 @@ Capstone
     #REMOVE_ROLE
     async def remove_role(self,message):
         command = message.content.split()
-        if(message.channel.name != "roles"):
+        if(message.channel.name != "roles" and message.channel.name != "bot-testing"):
             return
         if(len(command) == 1):
             await message.channel.send("Invalid usage. Correct usage:```/[rm|remove|rm_role] <role>```")
